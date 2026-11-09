@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Sevasek Classic Search: Remove AI Overview",
+  "version": "1.0.0",
+  "description": "Removes AI Overview from results pages, for Google Search™.",
+  "author": "Sevasek",
+  "homepage_url": "https://sevasek.com/classic-search",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*", "https://www.google.com.au/search*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

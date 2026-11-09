@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sevasek-classic-search
+          path: dist/sevasek-classic-search.zip
